@@ -47,7 +47,7 @@ your coins.
 
 It is recommended that you backup your wallet file before you
 encrypt your wallet.  To do this, close the Bitcoinold client and
-copy the wallet.dat file from ~/.bitcoinold/ on Linux, /Users/(user
+copy the wallet.dat file from ~/.bitcoin-old/ on Linux, /Users/(user
 name)/Application Support/Bitcoinold/ on Mac OSX, and %APPDATA%/Bitcoinold/
 on Windows (that is /Users/(user name)/AppData/Roaming/Bitcoinold on
 Windows Vista and 7 and /Documents and Settings/(user name)/Application

@@ -2,8 +2,8 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/bitcoinold/.bitcoinold" ]; then
-	BITCOINOLDD_DEFAULT_DATADIR="/var/lib/bitcoinold/.bitcoinold"
+if [ -d "/var/lib/bitcoinold/.bitcoin-old" ]; then
+	BITCOINOLDD_DEFAULT_DATADIR="/var/lib/bitcoinold/.bitcoin-old"
 else
 	BITCOINOLDD_DEFAULT_DATADIR="/var/lib/bitcoinoldd"
 fi
