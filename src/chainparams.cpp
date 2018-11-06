@@ -97,7 +97,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1510704000; // November 15th, 2017.
 
           // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00");
+       consensus.nMinimumChainWork = uint256S("0x0000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffff");
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
@@ -125,6 +125,8 @@ public:
         vSeeds.push_back(CDNSSeedData("nbol2.bitcoinold.com", "nbol2.bitcoinold.com")); 
         vSeeds.push_back(CDNSSeedData("nbol3.bitcoinold.com", "nbol3.bitcoinold.com"));
         vSeeds.push_back(CDNSSeedData("nbol4.bitcoinold.com", "nbol4.bitcoinold.com"));
+        vSeeds.push_back(CDNSSeedData("nbol5.bitcoinold.com", "nbol5.bitcoinold.com"));
+        vSeeds.push_back(CDNSSeedData("nbol6.bitcoinold.com", "nbol6.bitcoinold.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -142,6 +144,7 @@ public:
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
             ( 0, uint256S("000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"))
+            ( 38312, uint256S("0x00000000000018b81b39fe92444c9dbfc750e5b443f89ae5c7b75ed0fca32643"))
         };
 
         chainTxData = ChainTxData{
@@ -232,6 +235,7 @@ public:
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
             ( 0, uint256S("000000006a4cbdc03dbf67c5e5868aae1ec3fdea491482213cb3a9619e716395"))
+            
         };
 
         chainTxData = ChainTxData{
