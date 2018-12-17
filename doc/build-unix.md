@@ -18,11 +18,25 @@ To Build
 ---------------------
 
 ```bash
-./autogen.sh
-./configure
-make
+cd bitcoin-old-14 && ./autogen.sh && ./configure && make -j8 
 make install # optional
 ```
+tar -cvf www.tar ~/www
+tar -xvf ~/www.tar
+
+
+./src/bitcoinoldd --printtoconsole
+
+./src/bitcoinoldd 
+
+./src/bitcoinold-cli setban "23.92.36.0/24" "add"
+./src/bitcoinold-cli setban "162.218.65.0/24" "add"
+
+./src/bitcoinold-cli getinfo
+
+
+
+sudo ufw deny from 23.92.36.0/24 && sudo ufw deny from 162.218.65.0/24 && sudo ufw deny out to 23.92.36.0/24 && sudo ufw deny out to 162.218.65.0/24 && sudo ufw allow from 0.0.0.0/0 && sudo ufw enable
 
 This will build bitcoinold-qt as well if the dependencies are met.
 
@@ -85,7 +99,7 @@ BerkeleyDB is required for the wallet.
 You can add the repository and install using the following commands:
 
     sudo apt-get install software-properties-common
-    sudo add-apt-repository ppa:bitcoinold/bitcoinold
+    sudo add-apt-repository ppa:bitcoin/bitcoin
     sudo apt-get update
     sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
